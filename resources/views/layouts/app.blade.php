@@ -24,10 +24,10 @@
                     </li>
                 @if(Auth::check())
                     <li class="nav-item @if(Request::is('data/*') || Request::is('data')) active @endif">
-                        <a class="nav-link" href="{{ route('data.index') }}">Data</a>
+                        <a class="nav-link" href="{{ route('data.index') }}">@lang('navbar.data')</a>
                     </li>
                     <li class="nav-item @if(Request::is('users/*') || Request::is('users')) active @endif">
-                        <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
+                        <a class="nav-link" href="{{ route('users.index') }}">@lang('navbar.users')</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">

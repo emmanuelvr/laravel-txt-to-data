@@ -25,7 +25,7 @@ class DataController extends Controller
             $rows = Data::where($request->column, 'LIKE', "%$request->value%")->get();
             $total = count($rows);
             if($total === 0){
-                Session::flash('error', 'No hay registros que coincidan con tu búsqueda');
+                Session::flash('error', __('data.no_results'));
                 return redirect()->route('data.index');
             }
             $return = true;

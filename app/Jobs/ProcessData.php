@@ -15,7 +15,6 @@ class ProcessData implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     protected $path;
-    public $deleted = true;
     /**
      * Create a new job instance.
      *
@@ -33,7 +32,7 @@ class ProcessData implements ShouldQueue
      */
     public function handle()
     {
-        Data::truncate(); // For testing only
+        // Data::truncate(); // For testing only
 
         $content = utf8_encode(Storage::get($this->path));
         Storage::delete($this->path);
@@ -47,7 +46,7 @@ class ProcessData implements ShouldQueue
             $this->makeModel($values);
             $count++;
         }
-        dd($count);
+        return;
     }
 
     public function makeModel($values)

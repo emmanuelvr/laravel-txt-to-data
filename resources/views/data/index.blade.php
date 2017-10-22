@@ -6,15 +6,15 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header bg-info d-flex">
-                        <h4 class="text-white">Toda la data</h4>
-                        <a href="{{ route('data.create') }}" class="btn btn-light ml-auto">Importar data</a>
+                        <h4 class="text-white">@lang('data.index')</h4>
+                        <a href="{{ route('data.create') }}" class="btn btn-light ml-auto">@lang('data.import_data')</a>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-sm-12 d-flex">
-                                        <span class="mr-auto">Total de registros: {{ $total }}</span>
+                                        <span class="mr-auto">@lang('pagination.total_entries'): {{ $total }}</span>
                                         <form class="form-inline my-2 my-lg-0" method="GET">
                                             <select class="form-control mr-2" name="column">
                                                 @foreach($options as $option)
@@ -22,7 +22,7 @@
                                                 @endforeach
                                             </select>
                                             <input name="value" class="form-control mr-sm-2" type="search" placeholder="Valor a buscar" aria-label="Buscar" required>
-                                            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                                            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">@lang('data.search')</button>
                                             </form>
                                     </div>
                                 </div>

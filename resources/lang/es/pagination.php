@@ -15,5 +15,6 @@ return [
 
     'previous' => '&laquo; Anterior',
     'next'     => 'Siguiente &raquo;',
+    'total_entries'   => 'Total de registros'
 
 ];
