@@ -27,9 +27,11 @@
                     <li class="nav-item @if(Request::is('data/*') || Request::is('data')) active @endif">
                         <a class="nav-link" href="{{ route('data.index') }}">@lang('navbar.data')</a>
                     </li>
-                    <li class="nav-item @if(Request::is('users/*') || Request::is('users')) active @endif">
-                        <a class="nav-link" href="{{ route('users.index') }}">@lang('navbar.users')</a>
-                    </li>
+                    @admin
+                        <li class="nav-item @if(Request::is('users/*') || Request::is('users')) active @endif">
+                            <a class="nav-link" href="{{ route('users.index') }}">@lang('navbar.users')</a>
+                        </li>
+                    @endadmin
                 </ul>
                 <ul class="navbar-nav ml-auto mr-4">
                     <li class="nav-item dropdown">
