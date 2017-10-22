@@ -20,4 +20,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('users', 'UsersController');
 Route::resource('data', 'DataController');
-Route::get('/data?{column}={nombre}', 'DataController@search');

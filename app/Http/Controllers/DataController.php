@@ -16,7 +16,7 @@ class DataController extends Controller
 
         // Check if no one is messing with the get method
         if(count($request->column) > 0 && $request->value == ''){
-            Session::flash('error', 'No hay registros que coincidan con tu búsqueda');
+            Session::flash('error', __('data.no_results'));
             return redirect()->route('data.index');
         }
 
@@ -58,7 +58,7 @@ class DataController extends Controller
         $filename = $this->getFileName($file);
         $file->storeAs('tmp', $filename);
         ProcessData::dispatch($filename);
-        Session::flash('success', 'La data cargada correctamente. Dependiendo del tamaño, podría tomar hasta unos 5 minutos llenar la base de datos.');
+        Session::flash('success', __('data.loaded'));
         return redirect()->route('data.index');
     }
 
