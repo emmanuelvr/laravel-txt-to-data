@@ -4,5 +4,6 @@ return [
     'actions'               => 'Acciones',
     'save'                  => 'Guardar',
     'update'                => 'Actualizar',
-    'cancel'                => 'Cancelar'
+    'cancel'                => 'Cancelar',
+    'login'                 => 'Iniciar sesión'
 ];

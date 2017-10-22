@@ -9,5 +9,6 @@ return [
     'password_confirmation' => 'Password confirm',
     'email'                 => 'Email',
     'saved'                 => 'The user was successfully saved.',
-    'deleted'               => 'The user was successfully deleted.'
+    'deleted'               => 'The user was successfully deleted.',
+    'updated'               => 'The user was successfully updated.'
 ];

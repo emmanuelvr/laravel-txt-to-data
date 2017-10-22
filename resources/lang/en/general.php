@@ -5,5 +5,6 @@ return [
     'save'                  => 'Save',
     'update'                => 'Update',
     'cancel'                => 'Cancel',
-    'password'              => 'Password'
+    'password'              => 'Password',
+    'login'                 => 'Login'
 ];

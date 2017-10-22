@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item @if(Request::is('home')) active @endif">
-                        <a class="nav-link" href="/home">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                 @if(Auth::check())
                     <li class="nav-item @if(Request::is('data/*') || Request::is('data')) active @endif">

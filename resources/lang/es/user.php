@@ -9,5 +9,6 @@ return [
     'password'              => 'Contraseña',
     'password_confirmation' => 'Confirmación de contraseña',
     'saved'                 => 'El usuario se guardó satisfactoriamente.',
-    'deleted'               => 'El usuario se eliminó correctamente.'
+    'deleted'               => 'El usuario se eliminó satisfactoriamente.',
+    'updated'               => 'El usuario se actualizó satisfactoriamente.'
 ];
