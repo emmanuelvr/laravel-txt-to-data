@@ -1,5 +1,7 @@
 <?php
 return [
     'users'                 => 'Usuarios',
-    'data'                  => 'Data'
+    'data'                  => 'Data',
+    'logout'                => 'Cerrar sesión',
+    'view_profile'          => 'Ver perfil'
 ];

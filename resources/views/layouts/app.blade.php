@@ -31,11 +31,20 @@
                         <a class="nav-link" href="{{ route('users.index') }}">@lang('navbar.users')</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown ml-auto">
-                        <a class="nav-link" href="{{ route('users.show', Auth::id()) }}">
-                        {{ Auth::user()->name }}
+                <ul class="navbar-nav ml-auto mr-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ Auth::user()->name }}
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">@lang('navbar.view_profile')</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                {!! Form::open(['route' => 'logout', 'method' => 'POST']) !!}
+                                    <button class="dropdown-item" type="submit">@lang('navbar.logout')</button>
+                                {!! Form::close() !!}
+                            </a>
+                        </div>
                     </li>
                 </ul>
                 @endif
